@@ -1,0 +1,80 @@
+body {
+  background-image: linear-gradient(to right, #b24545, #fa4242);
+
+}
+
+main {
+  background-color: white;
+
+  max-width: 30rem;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: center;
+}
+
+label {
+  text-transform: capitalize;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 1px;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+main button {
+  /* position: relative; */
+  display: flex;
+  height: 50px;
+  width: 100%;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+
+
+
+[disabled] * {
+  color: grey;
+}
+
+[disabled] button {
+  color: gray !important;
+  background-color: white !important;
+}
+
+label {
+  width: 100%;
+  display: block;
+}
+
+form>label:first-of-type {
+  display: none;
+  /* importante */
+}
+
+button {
+  max-width: 49%;
+  /* importante */
+}

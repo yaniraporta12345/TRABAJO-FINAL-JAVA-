@@ -1,0 +1,32 @@
+button {
+    background-color: #a3e8de;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input {
+   background: silver;
+   border: 1px solid #393939;
+   border-radius: 5px 5px 5px 5px;
+   color: #393939;
+   font-size: 12px;
+   padding: 10px;
+   font-size: 20px;
+  }
+
+select {
+    font-size: 20px;
+    height: 50px;
+    border: none;
+}
+
+.titulo {
+    display: flex;
+    font-size: 25px;
+}

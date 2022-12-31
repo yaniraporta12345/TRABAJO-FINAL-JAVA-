@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario de inicio de sesión y registro en HTML | CodigoMaster</title>
+    <link rel="stylesheet" href="css/sign.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">
+                Login Inicio
+            </div>
+            <div class="title signup">
+                Registro
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Registrar</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form action="#" class="login" onsubmit="return mySubmitFunction(event)">
+                    <div class="field">
+                        <input type="text" placeholder="Usuario" id="usuario" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Password" id="password" required>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Olvidaste password?</a>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login" id="IniciarSesion">Iniciar sesion</input>
+                    </div>
+                    <div class="signup-link">
+                        No es un miembro? <a href="">Registrarse</a>
+                    </div>
+                </form>
+                <form class="row g-3 needs-validation mt-5" novalidate>
+                    <!-- method="post" no hizo nada -->
+
+                    <!-- <h1 class="text-center">Registro</h1> -->
+
+                    <section class="col-md-12">
+                        <label for="validationCustom01" class="form-label">Nombre</label>
+                        <input type="text" class="form-control rNombre" id="validationCustom01"
+                            placeholder="Escribir nombre" value="" required pattern="^[A-Z]+([\s]?[A-Za-z])*">
+                        <section class="valid-feedback">
+                            Nombre correcto!
+                        </section>
+                        <section class="invalid-feedback">
+                            Nombre inválido!
+                        </section>
+                    </section>
+
+                    <section class="col-md-12">
+                        <label for="validationCustom07" class="form-label">Email</label>
+                        <input type="text" class="form-control rCorreo" id="validationCustom07"
+                            placeholder="Escribir email" value="" required
+                            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                        <section class="valid-feedback errors">
+                            Email correcto!
+                        </section>
+                        <section class="invalid-feedback">
+                            Email inválido!
+                        </section>
+                    </section>
+
+                    <section class="col-md-12">
+                        <label for="validationCustomUsername" class="form-label">Usuario</label>
+                        <section class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="text" class="form-control rUsuario" id="validationCustomUsername"
+                                placeholder="Escribir usuario" aria-describedby="inputGroupPrepend" minlength="4"
+                                maxlength="16" required pattern="^^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{4,16}$">
+                            <section class="valid-feedback">
+                                Usuario correcto!
+                            </section>
+                            <section class="invalid-feedback">
+                                Usuario inválido!
+                                <p>El usuario debe tener entre 4 y 16 dígitos, al menos una mayúscula, al menos una
+                                    minúscula y al menos un número.</p>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-md-12">
+                        <label for="validationCustom08" class="form-label">Contraseña</label>
+                        <input type="text" class="form-control rContraseña" id="validationCustom08"
+                            placeholder="Escribir contraseña" minlength="8" required>
+                        <!-- pattern="^[A-Z]{1}[a-z]*[0-9]{1}$" -->
+                        <section class="invalid-feedback">
+                            Contraseña inválida!
+                            <p>La contraseña debe tener 8 dígitos, comenzar con una mayúscula,al menos una minúscula y
+                                al menos un número.</p>
+                        </section>
+                    </section>
+
+                    <section class="col-md-12">
+                        <label for="validationCustom09" class="form-label">Repetir contraseña</label>
+                        <input type="text" class="form-control" id="validationCustom09"
+                            placeholder="Volver escribir contraseña" minlength="8" required>
+                        <!-- pattern="^[A-Z]{1}[a-z]*[0-9]{1}$" -->
+                        <section class="invalid-feedback">
+                            Contraseña inválido!
+                        </section>
+                        <p id="Verificar"></p>
+                    </section>
+
+                    <section class="col-12">
+                        <section class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Acepto términos y condiciones.
+                            </label>
+                            <section class="invalid-feedback">
+                                Debe aceptar términos y condiciones.
+                            </section>
+                        </section>
+                    </section>
+                    <section class="col-12">
+                        <button class="btn btn-primary" type="button" onclick="intentarEnviar()">Enviar</button>
+                    </section>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/login-validate.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
